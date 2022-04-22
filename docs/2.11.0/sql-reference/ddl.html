@@ -3470,12 +3470,12 @@ sets the write synchronization mode for the underlying cache. If neither this no
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="p">[</span><span class="n">IF</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">tableName</span> <span class="err">{</span><span class="n">alter_specification</span><span class="err">}</span>
+<pre class="rouge highlight"><code data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="p">[</span><span class="n">IF</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">tableName</span> <span class="p">{</span><span class="n">alter_specification</span><span class="p">}</span>
 
 <span class="n">alter_specification</span><span class="p">:</span>
-    <span class="k">ADD</span> <span class="p">[</span><span class="k">COLUMN</span><span class="p">]</span> <span class="err">{</span><span class="p">[</span><span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">tableColumn</span> <span class="o">|</span> <span class="p">(</span><span class="n">tableColumn</span> <span class="p">[,...])</span><span class="err">}</span>
-  <span class="o">|</span> <span class="k">DROP</span> <span class="p">[</span><span class="k">COLUMN</span><span class="p">]</span> <span class="err">{</span><span class="p">[</span><span class="n">IF</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">columnName</span> <span class="o">|</span> <span class="p">(</span><span class="n">columnName</span> <span class="p">[,...])</span><span class="err">}</span>
-  <span class="o">|</span> <span class="err">{</span><span class="n">LOGGING</span> <span class="o">|</span> <span class="n">NOLOGGING</span><span class="err">}</span>
+    <span class="k">ADD</span> <span class="p">[</span><span class="k">COLUMN</span><span class="p">]</span> <span class="p">{[</span><span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">tableColumn</span> <span class="o">|</span> <span class="p">(</span><span class="n">tableColumn</span> <span class="p">[,...])}</span>
+  <span class="o">|</span> <span class="k">DROP</span> <span class="p">[</span><span class="k">COLUMN</span><span class="p">]</span> <span class="p">{[</span><span class="n">IF</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">columnName</span> <span class="o">|</span> <span class="p">(</span><span class="n">columnName</span> <span class="p">[,...])}</span>
+  <span class="o">|</span> <span class="p">{</span><span class="n">LOGGING</span> <span class="o">|</span> <span class="n">NOLOGGING</span><span class="p">}</span>
 
 <span class="n">tableColumn</span> <span class="p">:</span><span class="o">=</span> <span class="n">columnName</span> <span class="n">columnType</span></code></pre>
 </div>
@@ -3685,7 +3685,7 @@ Once the table is dropped, all pending commands will fail with appropriate error
 <pre class="rouge highlight"><code data-lang="sql"><span class="k">CREATE</span> <span class="p">[</span><span class="n">SPATIAL</span><span class="p">]</span> <span class="k">INDEX</span> <span class="p">[[</span><span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span><span class="p">]</span> <span class="n">indexName</span><span class="p">]</span> <span class="k">ON</span> <span class="n">tableName</span>
     <span class="p">(</span><span class="n">columnName</span> <span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">]</span> <span class="p">[,...])</span> <span class="p">[(</span><span class="n">index_option</span> <span class="p">[...])]</span>
 
-<span class="n">index_option</span> <span class="p">:</span><span class="o">=</span> <span class="err">{</span><span class="n">INLINE_SIZE</span> <span class="k">size</span> <span class="o">|</span> <span class="n">PARALLEL</span> <span class="n">parallelism_level</span><span class="err">}</span></code></pre>
+<span class="n">index_option</span> <span class="p">:</span><span class="o">=</span> <span class="p">{</span><span class="n">INLINE_SIZE</span> <span class="k">size</span> <span class="o">|</span> <span class="n">PARALLEL</span> <span class="n">parallelism_level</span><span class="p">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4086,7 +4086,7 @@ The password can be updated by the superuser (<code>ignite</code>, see <a href="
 </div>
 </div>
         <div class="copyright">
- © 2021 The Apache Software Foundation.<br/>
+ © 2022 The Apache Software Foundation.<br/>
 Apache, Apache Ignite, the Apache feather and the Apache Ignite logo are either registered trademarks or trademarks of The Apache Software Foundation. 
 
 </div>
@@ -4146,11 +4146,11 @@ Apache, Apache Ignite, the Apache feather and the Apache Ignite logo are either 
         debug: false,
       });
     </script>
-<script type='module' src='/assets/js/index.js?1640086706' async crossorigin></script>
-<script type='module' src='/assets/js/versioning.js?1640086706' async crossorigin></script>
+<script type='module' src='/assets/js/index.js?1650662264' async crossorigin></script>
+<script type='module' src='/assets/js/versioning.js?1650662264' async crossorigin></script>
 
-<link rel="stylesheet" href="/assets/css/styles.css?1640086706" media="print" onload="this.media='all'">
-<noscript><link media="all" rel="stylesheet" href="/assets/css/styles.css?1640086706"></noscript>
+<link rel="stylesheet" href="/assets/css/styles.css?1650662264" media="print" onload="this.media='all'">
+<noscript><link media="all" rel="stylesheet" href="/assets/css/styles.css?1650662264"></noscript>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" media="print" onload="this.media='all'">
 <noscript><link media="all" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"></noscript>
