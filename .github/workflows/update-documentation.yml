@@ -33,7 +33,7 @@ jobs:
           git config --global user.email "<>"
           git config --global user.name "GitHub Actions Bot"
           cd ${{ github.workspace }}
-          git branch bot-update-docs-${{ github.event.inputs.ignite-version }}
+          git checkout -b bot-update-docs-${{ github.event.inputs.ignite-version }}
           git commit -a -m "[bot] Update ${{ github.event.inputs.ignite-version }} documentation."
           git push origin bot-update-docs-${{ github.event.inputs.ignite-version }}
       - name: Create Pull Request
